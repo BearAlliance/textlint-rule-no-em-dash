@@ -6,36 +6,40 @@ import rule from '../src/index';
 // ruleName, rule, { valid, invalid }
 tester.run('rule', rule, {
   valid: [
-    // no problem
     'text',
+    // Hyphens are cool
+    '-',
+    // en dashes are also cool
+    '–',
   ],
   invalid: [
     // single match
     {
-      text: 'It is bugs.',
+      text: 'It is something—bad',
       errors: [
         {
-          message: 'Found bugs.',
+          message: 'en dashes (—) found.',
           line: 1,
-          column: 7,
+          column: 16,
         },
       ],
     },
+
     // multiple match
     {
-      text: `It has many bugs.
+      text: `It has many things—bad things.
 
-One more bugs`,
+One more thing—you're gonna love it`,
       errors: [
         {
-          message: 'Found bugs.',
+          message: 'en dashes (—) found.',
           line: 1,
-          column: 13,
+          column: 19,
         },
         {
-          message: 'Found bugs.',
+          message: 'en dashes (—) found.',
           line: 3,
-          column: 10,
+          column: 15,
         },
       ],
     },

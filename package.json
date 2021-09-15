@@ -10,11 +10,13 @@
     "src/"
   ],
   "scripts": {
-    "test": "npm run prettier:check && textlint-scripts test",
+    "test": "npm run prettier:check && npm run test:unit",
+    "test:unit": "textlint-scripts test",
     "build": "textlint-scripts build",
     "prepublish": "npm run --if-present build",
     "prettier:check": "prettier --check --ignore-path .gitignore .",
-    "prettier:write": "prettier --write --ignore-path .gitignore ."
+    "prettier:write": "prettier --write --ignore-path .gitignore .",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",

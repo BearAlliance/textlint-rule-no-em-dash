@@ -1,6 +1,9 @@
 # textlint-rule-no-em-dash
 
-a textlint rule to disallow em dashes
+a [textlint](https://textlint.github.io) rule to disallow em dashes
+
+[![CI](https://github.com/BearAlliance/textlint-rule-no-em-dash/actions/workflows/ci.yml/badge.svg)](https://github.com/BearAlliance/textlint-rule-no-em-dash/actions/workflows/ci.yml)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 ## Install
 
@@ -14,9 +17,9 @@ Via `.textlintrc`(Recommended)
 
 ```json
 {
-    "rules": {
-        "no-em-dash": true
-    }
+  "rules": {
+    "no-em-dash": true
+  }
 }
 ```
 

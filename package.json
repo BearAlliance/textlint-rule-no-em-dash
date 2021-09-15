@@ -10,11 +10,18 @@
     "src/"
   ],
   "scripts": {
-    "test": "textlint-scripts test",
+    "test": "npm run prettier:check && textlint-scripts test",
     "build": "textlint-scripts build",
-    "prepublish": "npm run --if-present build"
+    "prepublish": "npm run --if-present build",
+    "prettier:check": "prettier --check --ignore-path .gitignore .",
+    "prettier:write": "prettier --write --ignore-path .gitignore ."
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.0",
     "textlint-scripts": "^12.0.2",
     "textlint-tester": "^12.0.2"
   },
@@ -32,5 +39,10 @@
   "bugs": {
     "url": "https://github.com/BearAlliance/textlint-rule-no-em-dash/issues"
   },
-  "homepage": "https://github.com/BearAlliance/textlint-rule-no-em-dash#readme"
+  "homepage": "https://github.com/BearAlliance/textlint-rule-no-em-dash#readme",
+  "lint-staged": {
+    "*.@(ts|tsx|js|jsx|json|md|yml)": [
+      "prettier --write"
+    ]
+  }
 }

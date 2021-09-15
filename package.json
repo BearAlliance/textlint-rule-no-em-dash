@@ -1,0 +1,36 @@
+{
+  "version": "0.0.0",
+  "keywords": [
+    "textlintrule",
+    "em dash"
+  ],
+  "main": "lib/index.js",
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "scripts": {
+    "test": "textlint-scripts test",
+    "build": "textlint-scripts build",
+    "prepublish": "npm run --if-present build"
+  },
+  "devDependencies": {
+    "textlint-scripts": "^12.0.2",
+    "textlint-tester": "^12.0.2"
+  },
+  "name": "textlint-rule-no-em-dash",
+  "description": "a textlint rule to disallow em dashes",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BearAlliance/textlint-rule-no-em-dash.git"
+  },
+  "author": "Nick Cacace",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BearAlliance/textlint-rule-no-em-dash/issues"
+  },
+  "homepage": "https://github.com/BearAlliance/textlint-rule-no-em-dash#readme"
+}

@@ -18,7 +18,7 @@ tester.run('rule', rule, {
       text: 'It is something—bad',
       errors: [
         {
-          message: 'en dashes (—) found.',
+          message: 'em dash (—) found.',
           line: 1,
           column: 16,
         },
@@ -32,12 +32,12 @@ tester.run('rule', rule, {
 One more thing—you're gonna love it`,
       errors: [
         {
-          message: 'en dashes (—) found.',
+          message: 'em dash (—) found.',
           line: 1,
           column: 19,
         },
         {
-          message: 'en dashes (—) found.',
+          message: 'em dash (—) found.',
           line: 3,
           column: 15,
         },

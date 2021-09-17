@@ -9,7 +9,7 @@ export default function (context, options = {}) {
         return;
       }
       const indexOfBugs = matches.index;
-      const ruleError = new RuleError('en dashes (—) found.', {
+      const ruleError = new RuleError('em dash (—) found.', {
         index: indexOfBugs, // padding of index
       });
       report(node, ruleError);
